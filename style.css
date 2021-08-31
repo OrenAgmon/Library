@@ -1,0 +1,45 @@
+#cards-container{
+  
+    position: relative;
+    top: 30px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.cards{
+    border: solid 1px black;
+    margin: 20px;
+    width: 200px;
+    
+   
+}
+
+.cards p{
+    margin: 20px;
+}
+#label-container{
+  display: flex;
+  flex-direction: row;
+   margin-top: 30px;
+    
+}
+
+ul >li{
+    margin: 10px;
+    
+}
+.book-label{
+
+    display: inline-block;
+    min-width: 110px
+}
+.input{
+   
+    margin: 2px;
+    width: 200px
+}
+
+#submit-book{
+    margin-left: 50px;
+}
