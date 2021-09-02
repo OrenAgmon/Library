@@ -1,9 +1,29 @@
+ *{
+    box-sizing: border-box;
+} 
+
+#main-title{
+font-size: 2rem;
+text-align: center;
+
+}
+
+#add-btn{
+    font-size: 2.5rem;
+}
+.add-container{
+    display: flex;
+    justify-content: center;
+
+}
+
 #cards-container{
   
     position: relative;
     top: 30px;
     display: flex;
     justify-content: center;
+   
 
 }
 
@@ -11,35 +31,111 @@
     border: solid 1px black;
     margin: 20px;
     width: 200px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px
     
    
 }
+#book-title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    padding: 2px;
+    margin: 2px;
+}
+ .book-details{
+    padding: 5px;
+    margin: 5px;
+
+} 
 
 .cards p{
-    margin: 20px;
-}
-#label-container{
-  display: flex;
-  flex-direction: row;
-   margin-top: 30px;
     
 }
 
-ul >li{
-    margin: 10px;
-    
-}
-.book-label{
 
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: white;
+    z-index: 10;
+
+
+}
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    
+    border-bottom: 1px solid black;
+}
+
+#x-btn{
+    background: none;
+    outline: none;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.modal-content{
+    padding: 10px;
+    display: flex;
+    align-content: space-between;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ .modal-content  label{
+    width: 50px;
+    min-width: 100px;
     display: inline-block;
-    min-width: 110px
-}
-.input{
-   
-    margin: 2px;
-    width: 200px
+} 
+.modal-content li{
+    list-style-type:none;
+    padding: 10px;
 }
 
-#submit-book{
-    margin-left: 50px;
+.overlay{
+   
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 200ms ease-in-out;
+    opacity: 0;
+    pointer-events: none;
 }
+.overlay.active{
+opacity: 1;
+pointer-events: all;
+}
+
+.check-container{
+    display: flex;
+    padding: 5px;
+    margin: 5px;
+
+}
+
+
+
+
+

@@ -7,48 +7,58 @@
     <link rel="stylesheet" href="style.css">
     <title>Library</title>
 </head>
+
+
 <body>
+   
+        <p id="main-title">This is Your Library</p> 
+    
+    
+    <div class="add-container">
+        <button id="add-btn" data-modal-target="#new-book-modal" class="modal-btn">+</button>
+    </div>
     <div id="cards-container" >
       
-   
-    
     </div>
  
-     
-        
+    <div id="new-book-modal" class="modal">
+        <div class="modal-header">
+            <h3>Add a New Book</h3>
+            <button class="close-modal-btn" id="x-btn">&times; </button>
+
+        </div>
+    
+        <div class="modal-content">
+            <form>
+                <ul id="ul">
+                    <li>
+                        <label for="name" class="book-label">Book Name</label>
+                        <input type="text" id="name-input" name="name" class="input" autocomplete="off" data-lpignore='true'>
+                    </li>
+                    <li>
+                        <label for="author" class="book-label">Author</label>
+                        <input type="text" id="author-input" name="author" class="input" autocomplete="off" data-lpignore='true'>
+                    </li>
+                    <li>
+                        <label for="pages" class="book-label">Pages</label>
+                        <input type="text" id="pages-input" name="pages" class="input" autocomplete="off" data-lpignore='true'>
+                    </li>
+                    <li>
+                        <label for="read" id="did-read">is it read?</label> 
+                        <input type="checkbox" id="read-checkbox" name="book-status" value="true" >
+                    </li>
+                
+            
+                </ul>
+
+            </form>
+            <p id="input-problem" style="color: red; text-align: center;"></p>
+
+            <button id="submit-book" class=""> Add Book</button>
+        </div>
+    </div>
+    <div class="overlay"></div>
    
-<div id="label-container">
-    <form>
-        <ul id="ul">
-            <li>
-            <label for="name" class="book-label">Book Name</label>
-            <input type="text" id="name-input" name="name" class="input">
-        </li>
-        <li>
-            <label for="author" class="book-label">Author</label>
-            <input type="text" id="author-input" name="author" class="input">
-        </li>
-        <li>
-            <label for="pages" class="book-label">Pages</label>
-            <input type="text" id="pages-input" name="pages" class="input">
-        </li>
-        
-        <input type="radio" id="read" name="book-status" value="true">
-        <label for="read">read</label> <br>
-        <input type="radio" id="not-read" name="book-status" value="false">
-        <label for="not-read">not read</label>
-      
-</ul>
-
-<button id="submit-book" type="button"> check</button>
-</form>
-
-
-
-<p id="validation"></p>
-
-
-</div>
 
 
 
